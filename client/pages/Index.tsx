@@ -64,23 +64,15 @@ export default function Index() {
                 src={icon}
                 alt=""
                 aria-hidden="true"
-                className={`h-6 w-6 object-cover text-recon-black transition-colors group-hover:text-recon-green ${
-                  to === "/inventory"
-                    ? "mx-auto max-w-[50px] min-h-[50px] w-full"
-                    : ""
-                }`}
-                style={
-                  to === "/projects"
-                    ? {
-                        maxWidth: "50px",
-                        width: "auto",
-                        alignSelf: "stretch",
-                        minHeight: "50px",
-                        marginRight: "auto",
-                        marginLeft: "auto",
-                      }
-                    : undefined
-                }
+                className="h-6 w-6 object-cover text-recon-black transition-colors group-hover:text-recon-green"
+                style={{
+                  maxWidth: "50px",
+                  width: "auto",
+                  alignSelf: "stretch",
+                  minHeight: "50px",
+                  marginRight: "auto",
+                  marginLeft: "auto",
+                }}
               />
               <div>
                 <p
