@@ -50,7 +50,10 @@ export default function Index() {
   return (
     <div className="bg-white">
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-        <h2 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-400">
+        <h2
+          className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-400"
+          style={{ fontFamily: "Helvetica, sans-serif" }}
+        >
           Modules
         </h2>
         <div className="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-5">
