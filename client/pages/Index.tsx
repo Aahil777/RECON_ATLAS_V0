@@ -65,14 +65,27 @@ export default function Index() {
                 alt=""
                 aria-hidden="true"
                 className="h-6 w-6 object-cover text-recon-black transition-colors group-hover:text-recon-green"
-                style={{
-                  maxWidth: "50px",
-                  width: "auto",
-                  alignSelf: "stretch",
-                  minHeight: "50px",
-                  marginRight: "auto",
-                  marginLeft: "auto",
-                }}
+                style={
+                  to === "/bom-review"
+                    ? {
+                        alignSelf: "center",
+                        marginRight: "auto",
+                        marginLeft: "auto",
+                        maxWidth: "50px",
+                        minHeight: "50px",
+                        height: "auto",
+                        flexGrow: 0,
+                        width: "auto",
+                      }
+                    : {
+                        maxWidth: "50px",
+                        width: "auto",
+                        alignSelf: "stretch",
+                        minHeight: "50px",
+                        marginRight: "auto",
+                        marginLeft: "auto",
+                      }
+                }
               />
               <div>
                 <p
