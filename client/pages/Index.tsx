@@ -97,7 +97,12 @@ export default function Index() {
                 >
                   {label}
                 </p>
-                <p className="mt-1 text-xs text-neutral-500">{description}</p>
+                <p
+                  className="mt-1 text-xs text-neutral-500"
+                  style={{ fontFamily: "Helvetica, sans-serif" }}
+                >
+                  {description}
+                </p>
               </div>
             </Link>
           ))}
@@ -107,7 +112,10 @@ export default function Index() {
       <section className="border-t border-neutral-200 bg-neutral-50">
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
           <div className="flex items-baseline justify-between">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-400">
+            <h2
+              className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-400"
+              style={{ fontFamily: "Helvetica, sans-serif" }}
+            >
               Live Dashboard
             </h2>
             <span className="text-[10px] uppercase tracking-widest text-neutral-400">
