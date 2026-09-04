@@ -9,7 +9,7 @@ const utilityItems = [
 export default function UtilityBar() {
   return (
     <div
-      className="flex min-h-10 items-center justify-end gap-4 border-b border-neutral-200 bg-white px-4 text-[10px] font-medium uppercase tracking-[0.16em] text-neutral-500 sm:gap-6 sm:px-8"
+      className="flex min-h-10 items-center justify-end gap-4 border-b border-neutral-200 bg-recon-black px-4 text-[10px] font-medium uppercase tracking-[0.16em] text-neutral-500 sm:gap-6 sm:px-8"
       style={{ fontFamily: "Helvetica, sans-serif" }}
     >
       {utilityItems.map(({ label, icon: Icon }) => (
