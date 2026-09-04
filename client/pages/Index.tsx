@@ -71,7 +71,10 @@ export default function Index() {
             >
               <Icon className="h-6 w-6 text-recon-black transition-colors group-hover:text-recon-green" />
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-recon-black">
+                <p
+                  className="text-sm font-semibold uppercase tracking-wide text-recon-black"
+                  style={{ fontFamily: "Alatsi, sans-serif" }}
+                >
                   {label}
                 </p>
                 <p className="mt-1 text-xs text-neutral-500">{description}</p>
