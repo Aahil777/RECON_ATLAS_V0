@@ -1,18 +1,9 @@
 import { Link } from "react-router-dom";
-import {
-  FolderKanban,
-  BarChart3,
-  ClipboardList,
-  FileCheck2,
-  Globe2,
-  type LucideIcon,
-} from "lucide-react";
-
 interface TrayItem {
   label: string;
   description: string;
   to: string;
-  icon: LucideIcon;
+  icon: string;
 }
 
 const trayItems: TrayItem[] = [
@@ -20,31 +11,31 @@ const trayItems: TrayItem[] = [
     label: "Project Details",
     description: "Active procurement projects & owners",
     to: "/projects",
-    icon: FolderKanban,
+    icon: "https://cdn.builder.io/api/v1/image/assets%2F73a21bef0ae44344af00644d40dbb63c%2Fd5594657b9464bdebc889a6f83985530?format=webp&width=800&height=1200",
   },
   {
     label: "Inventory Visualisation",
     description: "Live component stock levels",
     to: "/inventory",
-    icon: BarChart3,
+    icon: "https://cdn.builder.io/api/v1/image/assets%2F73a21bef0ae44344af00644d40dbb63c%2F482f92f1d8ab44bc9c239872f61da8e6?format=webp&width=800&height=1200",
   },
   {
     label: "BOM Review",
     description: "Validate bills of materials",
     to: "/bom-review",
-    icon: ClipboardList,
+    icon: "https://cdn.builder.io/api/v1/image/assets%2F73a21bef0ae44344af00644d40dbb63c%2F6a1f880ba637463c925324bfc5c56fb0?format=webp&width=800&height=1200",
   },
   {
     label: "Datasheet and Compliance Review",
     description: "Specs, RoHS & REACH checks",
     to: "/datasheet-compliance",
-    icon: FileCheck2,
+    icon: "https://cdn.builder.io/api/v1/image/assets%2F73a21bef0ae44344af00644d40dbb63c%2F84d9271c471b442ca7211c8c5193d071?format=webp&width=800&height=1200",
   },
   {
     label: "View Recon Atlas",
     description: "Full component & supplier map",
     to: "/atlas",
-    icon: Globe2,
+    icon: "https://cdn.builder.io/api/v1/image/assets%2F73a21bef0ae44344af00644d40dbb63c%2F5d2aa2dd9c364ed29b8f168e4dd82dda?format=webp&width=800&height=1200",
   },
 ];
 
@@ -63,13 +54,18 @@ export default function Index() {
           Modules
         </h2>
         <div className="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-5">
-          {trayItems.map(({ label, description, to, icon: Icon }) => (
+          {trayItems.map(({ label, description, to, icon }) => (
             <Link
               key={to}
               to={to}
               className="group flex min-w-[220px] shrink-0 snap-start flex-col justify-between gap-6 rounded-lg border border-neutral-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-recon-green hover:shadow-[0_0_0_1px_hsl(var(--recon-green)),0_12px_24px_-12px_hsl(var(--recon-green)/0.35)] sm:min-w-0"
             >
-              <Icon className="h-6 w-6 text-recon-black transition-colors group-hover:text-recon-green" />
+              <img
+                src={icon}
+                alt=""
+                aria-hidden="true"
+                className="h-6 w-6 object-contain text-recon-black transition-colors group-hover:text-recon-green"
+              />
               <div>
                 <p
                   className="text-sm font-semibold uppercase tracking-wide text-recon-black"
