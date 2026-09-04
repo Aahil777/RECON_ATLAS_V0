@@ -70,10 +70,12 @@ export default function Index() {
                 style={
                   to === "/projects"
                     ? {
-                        maxWidth: "500px",
+                        maxWidth: "50px",
                         width: "auto",
                         alignSelf: "stretch",
                         minHeight: "50px",
+                        marginRight: "auto",
+                        marginLeft: "auto",
                       }
                     : undefined
                 }
