@@ -65,7 +65,9 @@ export default function Index() {
                 alt=""
                 aria-hidden="true"
                 className={`h-6 w-6 object-cover text-recon-black transition-colors group-hover:text-recon-green ${
-                  to === "/inventory" ? "mr-auto" : ""
+                  to === "/inventory"
+                    ? "mx-auto max-w-[50px] min-h-[50px] w-full"
+                    : ""
                 }`}
                 style={
                   to === "/projects"
