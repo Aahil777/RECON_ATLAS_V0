@@ -64,7 +64,19 @@ export default function Index() {
                 src={icon}
                 alt=""
                 aria-hidden="true"
-                className="h-6 w-6 object-contain text-recon-black transition-colors group-hover:text-recon-green"
+                className={`h-6 w-6 object-cover text-recon-black transition-colors group-hover:text-recon-green ${
+                  to === "/inventory" ? "mr-auto" : ""
+                }`}
+                style={
+                  to === "/projects"
+                    ? {
+                        maxWidth: "500px",
+                        width: "auto",
+                        alignSelf: "stretch",
+                        minHeight: "50px",
+                      }
+                    : undefined
+                }
               />
               <div>
                 <p
